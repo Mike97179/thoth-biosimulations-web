@@ -1,0 +1,63 @@
+.nav {
+    position: fixed;
+    background-color: rgb(247, 246, 249);
+    width: 100%;
+    border-bottom: .1rem solid rgb(219, 214, 225);
+    z-index: 1;
+    font-size: 1.4rem;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6.4rem;
+        &__logo {
+            display: flex;
+            align-items: center;
+            column-gap: .8rem;
+            &--letter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.2rem;
+                height: 3.2rem;
+                background-color: rgb(54, 20, 93);
+                border-radius: 1rem;
+                span {
+                    font-weight: 700;
+                    color: rgb(253, 246, 226);
+                }
+            }
+            &--text {
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: 600;
+                div {
+                    color: rgb(20, 13, 28);
+                }
+                span {
+                    color: rgb(235, 171, 10);
+                }
+            }
+        }
+        &__menu {
+            &--link {
+                font-family: 'Inter', sans-serif;
+                padding: .8rem 1.2rem;
+                color: rgb(107, 94, 120);
+                font-weight: 500;
+                &:hover {
+                    background-color: rgba(235, 232, 237, .5);
+                    color: rgb(20, 13, 28);
+                    border-radius: 1rem;
+                }
+            }        
+        }
+        &--collaborate {
+            font-weight: 500;
+            font-size: 1.2rem;
+            height: 3.2rem;
+            width: 9rem;
+        }
+    }
+}
