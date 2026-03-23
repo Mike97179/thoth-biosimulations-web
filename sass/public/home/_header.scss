@@ -1,6 +1,5 @@
 .header {
     padding-top: 22rem;
-    
     &__container {
         display: flex;
         flex-direction: column;
@@ -53,6 +52,7 @@
             }
         }
         &__box {
+            margin-top: 8rem;
             &--item {
                 svg {
                     width: 2.6rem;

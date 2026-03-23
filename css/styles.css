@@ -52,33 +52,67 @@ a {
   color: rgb(29, 11, 50);
   transition: all 0.3s ease;
 }
+.btn--purple {
+  background-color: rgb(54, 20, 93);
+  color: rgb(253, 246, 226);
+}
+.btn--white {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(107, 94, 120);
+  transition: all 0.3s ease;
+}
+.btn--white:hover {
+  color: rgb(20, 13, 28);
+  transition: all 0.3s ease;
+}
 
 .label {
   padding: 0.6rem 1.2rem;
   border-radius: 999rem;
   font-weight: 600;
 }
+.label svg {
+  width: 1.8rem;
+}
+.label p {
+  font-size: 1.2rem;
+}
 .label--information {
   color: rgb(54, 20, 93);
   background-color: rgba(54, 20, 93, 0.1);
+}
+.label--warning {
+  color: rgb(239, 68, 68);
+  background-color: rgba(239, 68, 68, 0.1);
 }
 
 .box {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 8rem;
-  column-gap: 4rem;
+  column-gap: 1.5rem;
 }
 .box--three-items {
   width: 33.3333333333%;
-  padding: 2.4rem;
+  padding: 1.6rem;
   border-radius: 1.2rem;
   font-size: 1.2rem;
 }
 .box--three-items--white {
   background-color: rgba(255, 255, 255, 0.6);
   border: 0.1rem solid rgb(219, 214, 225);
+}
+
+.text__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 24rem;
+  text-align: center;
+  line-height: 1;
+}
+.text__block p {
+  margin-top: 1.6rem;
 }
 
 .pt-1 {
@@ -516,6 +550,9 @@ a {
   width: 1.6rem;
   color: rgb(29, 11, 50);
 }
+.header__container__box {
+  margin-top: 8rem;
+}
 .header__container__box--item svg {
   width: 2.6rem;
   margin-bottom: 0.8rem;
@@ -527,6 +564,89 @@ a {
 .header__container__box--item p {
   margin-top: 0.4rem;
   color: rgb(107, 94, 120);
+}
+
+.homeApproach__container--text {
+  font-size: 2.6rem;
+}
+.homeApproach__container--text h2 {
+  color: rgb(20, 13, 28);
+}
+.homeApproach__container--text h2 span {
+  color: rgb(235, 171, 10);
+}
+.homeApproach__container--text p {
+  color: rgb(107, 94, 120);
+  font-size: 1.6rem;
+}
+.homeApproach__container--buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.4rem;
+  padding: 0.4rem;
+  border: 0.1rem solid rgb(219, 214, 225);
+  border-radius: 1.2rem;
+  height: 5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+}
+.homeApproach__container--buttons span {
+  display: flex;
+  column-gap: 0.8rem;
+  cursor: pointer;
+}
+.homeApproach__container--buttons span svg {
+  width: 1.6rem;
+}
+.homeApproach__container--content {
+  display: flex;
+  column-gap: 4.8rem;
+}
+.homeApproach__container--content img {
+  padding: 1.6rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.6rem;
+  width: calc(48.7% - 2.4rem);
+}
+.homeApproach__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: calc(51.3% - 2.4rem);
+}
+.homeApproach__info span {
+  display: flex;
+  column-gap: 0.8rem;
+}
+.homeApproach__info h3 {
+  font-size: 3rem;
+  color: rgb(20, 13, 28);
+  letter-spacing: -0.075rem;
+}
+.homeApproach__info--description {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  color: rgb(107, 94, 120);
+  margin-top: 1.6rem;
+  line-height: 1.6;
+}
+.homeApproach__box {
+  margin-top: 3.2rem;
+}
+.homeApproach__box--item {
+  text-align: center;
+}
+.homeApproach__box--item h3 {
+  font-size: 2rem;
+  color: rgb(235, 171, 10);
+}
+.homeApproach__box--item p {
+  margin-top: 0.4rem;
+  color: rgb(107, 94, 120);
+  font-family: "Inter", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
