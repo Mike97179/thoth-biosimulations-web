@@ -1,0 +1,70 @@
+.homePlatform {
+    background-color: rgb(255, 255, 255);
+    &__container {
+        &--content {
+            display: flex;
+            column-gap: 4.8rem;
+            img {
+                display: flex;
+                margin: auto 0;
+                background-color: rgb(255, 255, 255);
+                border-radius: 1.6rem;
+                width: calc(48.7% - 2.4rem);
+                height: 90%;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: calc(51.3% - 2.4rem);
+        span {
+            display: flex;
+            column-gap: .8rem;
+        }
+        h3 {
+            font-size: 3.6rem;
+            color: rgb(20, 13, 28);
+            letter-spacing: -.075rem;
+        }
+        &--description {
+            font-size: 1.6rem;
+            font-family: "Inter", sans-serif;
+            color: rgb(107, 94, 120);
+            margin-top: 1.6rem;
+            line-height: 1.6;
+        }
+    }
+    &__box {
+        flex-direction: column;
+        row-gap: 2rem;
+        &--item {
+            display: flex;
+            align-items: center;
+            column-gap: 1.6rem;
+            &-number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(235, 171, 10, 0.1);
+                border-radius: 1rem;
+                color: rgb(235, 171, 10);
+                font-size: 1.4rem;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            &-content {
+                font-family: "Inter", sans-serif;
+                h4 {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                    margin-top: .2rem;
+                }
+            }
+        }
+    }
+}

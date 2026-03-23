@@ -48,6 +48,8 @@
     padding: .6rem 1.2rem;
     border-radius: 999rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
     svg {
         width: 1.8rem;
     }
@@ -61,6 +63,10 @@
     &--warning {
         color: rgb(239, 68, 68);
         background-color: rgba(239, 68, 68, 0.1);
+    }
+    &--yellow {
+        color: rgb(235, 171, 10);
+        background-color: rgba(235, 171, 10, 0.1);
     }
 }
 
