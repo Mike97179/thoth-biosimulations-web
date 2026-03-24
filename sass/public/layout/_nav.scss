@@ -1,10 +1,11 @@
 .nav {
     position: fixed;
-    background-color: rgb(247, 246, 249);
+    background-color: rgba(247, 246, 249, 0.8);
     width: 100%;
-    border-bottom: .1rem solid rgb(219, 214, 225);
-    z-index: 1;
+    border-bottom: .1rem solid rgba(219, 214, 225, 0.5);
+    z-index: 2;
     font-size: 1.5rem;
+    backdrop-filter: blur(2.4rem);
     &__container {
         display: flex;
         justify-content: space-between;
@@ -24,6 +25,7 @@
                 border-radius: 1rem;
                 span {
                     font-weight: 700;
+                    font-size: 1.5rem;
                     color: rgb(253, 246, 226);
                 }
             }

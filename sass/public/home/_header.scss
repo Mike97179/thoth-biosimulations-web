@@ -54,6 +54,11 @@
         &__box {
             margin-top: 8rem;
             &--item {
+                transition: all .3s ease;
+                &:hover {
+                    border: .08rem solid rgba(235, 171, 10, 0.3);
+                    transition: all .3s ease;
+                }
                 svg {
                     width: 2.6rem;
                     margin-bottom: 0.8rem;
