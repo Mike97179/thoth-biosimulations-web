@@ -191,6 +191,17 @@
                 }
             }
         }
+        &__info {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: 1.6rem;
+            margin-top: 1.2rem;
+            span {
+                font-family: "Inter", sans-serif;
+                font-size: 1.2rem;
+                color: rgb(107, 94, 120);
+            }
+        }
     }
 }
 
