@@ -1,0 +1,172 @@
+.contact {
+    padding-top: 18rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &__label {
+                margin-bottom: 2.4rem;
+                font-family: 'Inter', sans-serif;
+                font-size: 1.2rem;
+                transition: background-color .3s ease;
+
+                &:hover {
+                    background-color: rgba(54, 20, 93, 0.8);
+                }
+            }
+
+            h1 {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 4.8rem;
+                font-weight: 700;
+                letter-spacing: -.12rem;
+                line-height: 4.8rem;
+
+                span {
+                    color: rgb(235, 171, 10);
+                }
+            }
+
+            > p {
+                margin-top: 2.4rem;
+                font-family: 'Inter', sans-serif;
+                font-size: 1.8rem;
+                line-height: 2.925rem;
+                color: rgb(107, 94, 120);
+            }
+
+            &__details {
+                margin-top: 4.8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+
+                &--item {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.6rem;
+
+                    &-icon {
+                        background-color: rgba(235, 171, 10, 0.1);
+                        border-radius: 1.2rem;
+                        width: 4rem;
+                        height: 4rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        i {
+                            font-size: 2rem;
+                            color: rgb(235, 171, 10);
+                        }
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .2rem;
+
+                        h3 {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            color: rgb(20, 13, 28);
+                            line-height: 2rem;
+                        }
+
+                        p {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 1.4rem;
+                            color: rgb(107, 94, 120);
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__form {
+            background-color: rgb(255, 255, 255);
+            border-radius: 1.6rem;
+            padding: 3.2rem;
+            border: .08rem solid rgba(219, 214, 225, 0.5);
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            &__row {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.6rem;
+
+                &--group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .8rem;
+
+                    label {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: rgb(20, 13, 28);
+                    }
+
+                    input, textarea {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.4rem;
+                        color: rgb(20, 13, 28);
+                        border: .08rem solid rgba(219, 214, 225, 0.8);
+                        border-radius: .8rem;
+                        padding: .4rem 1.2rem;
+                        height: 3.6rem;
+                        outline: none;
+                        transition: border .3s ease;
+                        background-color: rgb(255, 255, 255);
+
+                        &::placeholder {
+                            color: rgb(180, 170, 190);
+                        }
+
+                        &:focus {
+                            border: .08rem solid rgba(54, 20, 93, 0.5);
+                            box-shadow: 0 0 0 .3rem rgba(54, 20, 93, 0.1);
+                        }
+                    }
+
+                    textarea {
+                        resize: vertical;
+                        min-height: 14rem;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                font-size: 1.4rem;
+                font-weight: 600;
+                padding: .8rem 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .8rem;
+                border: none;
+                cursor: pointer;
+
+                i {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

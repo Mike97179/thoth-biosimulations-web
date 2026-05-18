@@ -1,0 +1,82 @@
+.aboutFounder {
+    &__container {
+        &__card {
+            display: grid;
+            grid-template-columns: 40rem 1fr;
+            column-gap: 5rem;
+            align-items: center;
+
+            &--image {
+                background-color: rgb(235, 232, 237);
+                border-radius: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40rem;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    border-radius: 1.6rem;
+                }
+            }
+
+            &--info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                span {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin-bottom: 1.6rem;
+                    &:hover {
+                        background-color: rgba(54, 20, 93, 0.8);
+                    }
+                }
+
+                h2 {
+                    font-family: 'Space Grotesk', sans-serif;
+                    font-size: 3.6rem;
+                    font-weight: 700;
+                    letter-spacing: -.09rem;
+                    line-height: 4rem;
+                    color: rgb(20, 13, 28);
+                    margin-bottom: .8rem;
+                }
+
+                h3 {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: rgb(235, 171, 10);
+                    margin-bottom: 2.4rem;
+                }
+
+                p {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
+                    color: rgb(107, 94, 120);
+                    margin-bottom: 1.6rem;
+                }
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.4rem;
+                    color: rgb(235, 171, 10);
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

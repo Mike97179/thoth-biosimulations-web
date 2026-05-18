@@ -1,0 +1,148 @@
+.adminMain {
+    margin-left: 26rem;
+    margin-right: 16rem;
+    padding: 3.2rem;
+    min-height: 100vh;
+
+    &__header {
+        margin-bottom: 3.2rem;
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: rgb(20, 13, 28);
+        }
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+
+        &--card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 1.2rem;
+            padding: 2.4rem;
+            border: .08rem solid rgb(219, 214, 225);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+
+            &-info {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1.4rem;
+                    color: rgb(107, 94, 120);
+                    font-weight: 500;
+                    letter-spacing: -.035rem;
+                    line-height: 2rem;
+                }
+
+                i {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &-count {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+            }
+
+            h2 {
+                font-family: 'Inter', sans-serif;
+                font-size: 3rem;
+                font-weight: 700;
+                color: rgb(20, 13, 28);
+                line-height: 3.6rem;
+            }
+        }
+    }
+
+    &__recent {
+        background-color: rgb(255, 255, 255);
+        border-radius: 1.2rem;
+        padding: 2.4rem;
+        border: .08rem solid rgb(219, 214, 225);
+        margin-top: 3.2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: rgb(20, 13, 28);
+            margin-bottom: 2.4rem;
+            letter-spacing: -.045rem;
+            line-height: 2.8rem;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            &--item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1.2rem;
+                background-color: rgb(247, 246, 249);
+                border-radius: .8rem;
+                padding: 1.6rem;
+
+                &-dot {
+                    width: .8rem;
+                    height: .8rem;
+                    border-radius: 50%;
+                    background-color: rgb(219, 214, 225);
+                    flex-shrink: 0;
+                    margin-top: .6rem;
+
+                    &--new {
+                        background-color: rgb(235, 171, 10);
+                    }
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .4rem;
+
+                    &-name {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        color: rgb(20, 13, 28);
+
+                        span {
+                            font-weight: 400;
+                            color: rgb(107, 94, 120);
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    &-message {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 1.4rem;
+                        color: rgb(107, 94, 120);
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+
+        &--empty {
+            p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1.4rem;
+                color: rgb(107, 94, 120);
+                line-height: 2rem;
+            }
+        }
+    }
+}

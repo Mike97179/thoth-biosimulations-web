@@ -1,0 +1,28 @@
+.aboutMission {
+    background-color: rgb(255, 255, 255);
+    &__container {
+        &__box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6rem;
+
+            &--item {
+                h2 {
+                    font-family: 'Space Grotesk', sans-serif;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    letter-spacing: -.075rem;
+                    line-height: 3.6rem;
+                }
+
+                p {
+                    margin-top: 1.6rem;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                    color: rgb(107, 94, 120);
+                    font-family: 'Inter', sans-serif;
+                }
+            }
+        }
+    }
+}

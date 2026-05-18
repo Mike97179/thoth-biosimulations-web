@@ -1,0 +1,103 @@
+.adminLayout {
+    min-height: 100vh;
+    background-color: rgb(247, 246, 249);
+}
+
+.adminSidebar {
+    background-color: rgb(20, 13, 28);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 26rem;
+    border-right: .08rem solid rgb(45, 32, 60);
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        padding: 2.4rem;
+        border-bottom: .08rem solid rgb(45, 32, 60);
+
+        .nav__container__logo--letter {
+            background-color: rgb(235, 171, 10);
+            width: 3.2rem;
+            height: 3.2rem;
+            
+            span {
+                color: rgb(24, 9, 42);
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+
+        span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: rgb(224, 221, 227);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        flex: 1;
+        padding: 1.6rem;
+
+        &--link {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem 1rem;
+            gap: 1.2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, 0);
+            color: rgba(224, 221, 227, 0.7);
+            padding: 1rem 1.2rem;
+            line-height: 2rem;
+            text-decoration: none;
+            transition: background-color .3s ease, color .3s ease;
+            border-radius: 1rem;
+
+            i {
+                font-size: 1.6rem;
+                width: 2rem;
+            }
+
+            &:hover {
+                background-color: rgba(42, 26, 61, 0.5);
+                color: rgb(224, 221, 227);
+            }
+
+            &.active {
+                background-color: rgb(42, 26, 61);
+                color: rgb(235, 233, 237);
+            }
+        }
+    }
+
+    &__footer {
+        padding: 1.6rem;
+        border-top: .08rem solid rgb(45, 32, 60);
+
+        &--link {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            color: rgba(224, 221, 227, 0.7);
+            text-decoration: none;
+            transition: color .3s ease;
+
+            &:hover {
+                color: rgb(224, 221, 227);
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.authForgotSent {
+    padding-top: 18rem;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 1.6rem;
+        padding: 5.6rem 3.2rem;
+        width: 60rem;
+        border: .08rem solid rgba(219, 214, 225, 0.5);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+        text-align: center;
+
+        &__icon {
+            i {
+                font-size: 4.8rem;
+                color: rgb(235, 171, 10);
+            }
+        }
+
+        &__header {
+            h2 {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                color: rgb(20, 13, 28);
+                margin-bottom: .8rem;
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1.4rem;
+                color: rgb(107, 94, 120);
+                line-height: 2rem;
+
+                strong {
+                    font-weight: 700;   
+                }
+            }
+        }
+
+        &__footer {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+
+            a {
+                color: rgb(235, 171, 10);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

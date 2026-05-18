@@ -1,0 +1,79 @@
+.nav {
+    position: fixed;
+    background-color: rgba(247, 246, 249, 0.8);
+    width: 100%;
+    border-bottom: .1rem solid rgba(219, 214, 225, 0.5);
+    z-index: 2;
+    font-size: 1.5rem;
+    backdrop-filter: blur(2.4rem);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6.4rem;
+        &__logo {
+            display: flex;
+            align-items: center;
+            column-gap: .8rem;
+            &--letter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.2rem;
+                height: 3.2rem;
+                background-color: rgb(54, 20, 93);
+                border-radius: 1rem;
+                span {
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: rgb(253, 246, 226);
+                }
+            }
+            &--text {
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: 600;
+                div {
+                    color: rgb(20, 13, 28);
+                }
+                span {
+                    color: rgb(235, 171, 10);
+                }
+            }
+        }
+        &__menu {
+            &--link {
+                font-family: 'Inter', sans-serif;
+                padding: .8rem 1.2rem;
+                color: rgb(107, 94, 120);
+                font-weight: 500;
+                &:hover {
+                    background-color: rgba(235, 232, 237, .5);
+                    color: rgb(20, 13, 28);
+                    border-radius: 1rem;
+                }
+            }        
+        }
+        &__actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &--signin, &--signup {
+                font-family: 'Inter', sans-serif;
+                font-size: 1.4rem;
+                font-weight: 600;
+                padding: .8rem 1.6rem;
+            }
+
+            &--signin {
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            }
+
+            &--signup {
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
