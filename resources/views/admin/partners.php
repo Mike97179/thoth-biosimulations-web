@@ -27,7 +27,7 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
-        <form action="/admin/partners/create" method="POST">
+        <form action="/admin/partners/create" method="POST" enctype="multipart/form-data">
             <div class="adminModal__card__group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -37,8 +37,12 @@
                 <textarea id="description" name="description" rows="4"></textarea>
             </div>
             <div class="adminModal__card__group">
-                <label for="logo">Logo URL</label>
-                <input type="text" id="logo" name="logo" placeholder="https://...">
+                <label>Logo</label>
+                <label for="logo" class="adminModal__card__file">
+                    <i class="fa-regular fa-image"></i>
+                    <span>Choose File</span>
+                    <input type="file" id="logo" name="logo" accept="image/*">
+                </label>
             </div>
             <div class="adminModal__card__group">
                 <label for="url">Website URL</label>
@@ -65,7 +69,7 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
-        <form action="/admin/partners/edit" method="POST">
+        <form action="/admin/partners/edit" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" id="editPartnerId">
             <div class="adminModal__card__group">
                 <label for="editName">Name</label>
@@ -76,8 +80,13 @@
                 <textarea id="editDescription" name="description" rows="4"></textarea>
             </div>
             <div class="adminModal__card__group">
-                <label for="editLogo">Logo URL</label>
-                <input type="text" id="editLogo" name="logo" placeholder="https://...">
+                <label>Logo</label>
+                <img id="currentLogo" src="" alt="Current logo" style="height: 40px; width: auto; object-fit: contain; margin-bottom: 8px; display: block;">
+                <label for="editLogo" class="adminModal__card__file">
+                    <i class="fa-regular fa-image"></i>
+                    <span>Change Logo</span>
+                    <input type="file" id="editLogo" name="logo" accept="image/*">
+                </label>
             </div>
             <div class="adminModal__card__group">
                 <label for="editUrl">Website URL</label>

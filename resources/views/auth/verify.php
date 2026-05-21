@@ -1,3 +1,5 @@
+<?php postVerifyToken(); ?>
+
 <?php
     $email = isset($_SESSION['register_email']) ? $_SESSION['register_email'] : '';
     $activated = isset($_SESSION['activated']) ? $_SESSION['activated'] : false;

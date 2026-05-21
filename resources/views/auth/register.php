@@ -1,6 +1,8 @@
 <?php include VIEW_LAYOUT . DS . 'head.php'; ?>
 <?php include VIEW_LAYOUT . DS . 'nav.php'; ?>
 
+<?php $res = postRegisterUser(); ?>
+
 <section class="authRegister pt-6 pb-6">
     <div class="authRegister__container container">
         <div class="authRegister__card">

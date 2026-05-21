@@ -42,7 +42,13 @@
                 $password = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
                 query("INSERT INTO users (first_name, last_name, email, password, token) VALUES ('$first_name', '$last_name', '$email', '$password', '$token')");
                 $_SESSION['register_email'] = $email;
-                // sendActivationEmail($email, $first_name, $token);
+                $body = "
+                    <h2>Hi $first_name,</h2>
+                    <p>Your activation token is:</p>
+                    <h1 style='letter-spacing: 8px;'>$token</h1>
+                    <p>Enter this code on the verification page to activate your account.</p>
+                ";
+                sendEmail($email, 'Activate your Thoth account', $body);
                 redirect('/auth/verify');
             }
         }

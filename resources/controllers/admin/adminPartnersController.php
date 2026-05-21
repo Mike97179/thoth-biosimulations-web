@@ -12,7 +12,7 @@
             $partner = <<<DELIMITER
                 <div class="adminPartnersGrid__item">
                     <div class="adminPartnersGrid__item--info">
-                        <img src="img/home/$logo" alt="$name">
+                        <img src="/img/home/$logo" alt="$name">
                         <div>
                             <h3>$name</h3>
                             <p>$url</p>
@@ -43,9 +43,15 @@ DELIMITER;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = escape(trim($_POST['name']));
             $description = escape(trim($_POST['description']));
-            $logo = escape(trim($_POST['logo']));
             $url = escape(trim($_POST['url']));
             $numOrder = escape(trim($_POST['order']));
+
+            $logo = '';
+            if (isset($_FILES['logo']) && $_FILES['logo']['error'] === 0) {
+                $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
+                $logo = md5(uniqid()) . '.' . $ext;
+                move_uploaded_file($_FILES['logo']['tmp_name'], __DIR__ . '/../../../public/img/home/' . $logo);
+            }
 
             query("INSERT INTO partners (name, description, logo, url, numOrder) VALUES ('$name', '$description', '$logo', '$url', $numOrder)");
             setSwal('Success', 'Partner created successfully.', 'success');
@@ -58,11 +64,18 @@ DELIMITER;
             $id = escape(trim($_POST['id']));
             $name = escape(trim($_POST['name']));
             $description = escape(trim($_POST['description']));
-            $logo = escape(trim($_POST['logo']));
             $url = escape(trim($_POST['url']));
             $numOrder = escape(trim($_POST['order']));
 
-            query("UPDATE partners SET name = '$name', description = '$description', logo = '$logo', url = '$url', numOrder = $numOrder WHERE id = $id");
+            $logoUpdate = '';
+            if (isset($_FILES['logo']) && $_FILES['logo']['error'] === 0) {
+                $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
+                $logo = md5(uniqid()) . '.' . $ext;
+                move_uploaded_file($_FILES['logo']['tmp_name'], __DIR__ . '/../../../public/img/home/' . $logo);
+                $logoUpdate = ", logo = '$logo'";
+            }
+
+            query("UPDATE partners SET name = '$name', description = '$description', url = '$url', numOrder = $numOrder $logoUpdate WHERE id = $id");
             setSwal('Success', 'Partner updated successfully.', 'success');
             redirect('/admin/partners');
         }

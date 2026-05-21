@@ -48,12 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('editPartnerId').value = data.id;
             document.getElementById('editName').value = data.name;
             document.getElementById('editDescription').value = data.description;
-            document.getElementById('editLogo').value = data.logo;
             document.getElementById('editUrl').value = data.url;
             document.getElementById('editOrder').value = data.order;
+
+            // Mostrar logo actual
+            const currentLogo = document.getElementById('currentLogo');
+            if (currentLogo) currentLogo.src = '/img/home/' + data.logo;
 
             modalEdit.classList.add('active');
         });
     });
-
 });
